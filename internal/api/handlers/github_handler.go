@@ -11,11 +11,11 @@ import (
 
 // GitHubHandler handles GitHub-related API requests
 type GitHubHandler struct {
-	service *services.GitHubService
+	service services.GitHubServiceInterface
 }
 
 // NewGitHubHandler creates a new GitHubHandler
-func NewGitHubHandler(service *services.GitHubService) *GitHubHandler {
+func NewGitHubHandler(service services.GitHubServiceInterface) *GitHubHandler {
 	return &GitHubHandler{
 		service: service,
 	}

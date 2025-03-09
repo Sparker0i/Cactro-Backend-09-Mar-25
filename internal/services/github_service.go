@@ -19,7 +19,7 @@ type GitHubService struct {
 }
 
 // NewGitHubService creates a new GitHubService
-func NewGitHubService(config *config.Config) *GitHubService {
+func NewGitHubService(config *config.Config) GitHubServiceInterface {
 	return &GitHubService{
 		config: config,
 		client: &http.Client{},

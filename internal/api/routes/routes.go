@@ -29,7 +29,7 @@ func SetupRouter(config *config.Config) *gin.Engine {
 	router.Use(cors.New(corsConfig))
 
 	// Create services
-	githubService := services.NewGitHubService(config)
+	var githubService services.GitHubServiceInterface = services.NewGitHubService(config)
 
 	// Create handlers
 	githubHandler := handlers.NewGitHubHandler(githubService)
